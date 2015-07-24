@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C92D7A7F-7364-4815-9188-440F1686FA6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachModels\kj_category.cs" />
+    <Compile Include="AttachModels\kj_category_group.cs" />
+    <Compile Include="AttachModels\kj_service.cs" />
+    <Compile Include="Models\kj_answer.cs" />
+    <Compile Include="Models\kj_category.cs" />
+    <Compile Include="Models\kj_category_group.cs" />
+    <Compile Include="Models\kj_comment.cs" />
+    <Compile Include="Models\kj_customer.cs" />
+    <Compile Include="Models\kj_dataContext.cs" />
+    <Compile Include="Models\kj_dictionary.cs" />
+    <Compile Include="Models\kj_dictionary_data.cs" />
+    <Compile Include="Models\kj_enterprise.cs" />
+    <Compile Include="Models\kj_enterprise_channel.cs" />
+    <Compile Include="Models\kj_enterprise_channel_content.cs" />
+    <Compile Include="Models\kj_enterprise_channel_content_album.cs" />
+    <Compile Include="Models\kj_enterprise_channel_type.cs" />
+    <Compile Include="Models\kj_enterprise_comment.cs" />
+    <Compile Include="Models\kj_invite_bid.cs" />
+    <Compile Include="Models\kj_phone_verifycode.cs" />
+    <Compile Include="Models\kj_platform_log.cs" />
+    <Compile Include="Models\kj_project.cs" />
+    <Compile Include="Models\kj_project_album.cs" />
+    <Compile Include="Models\kj_project_bid_enterprise.cs" />
+    <Compile Include="Models\kj_project_bid_enterprise_album.cs" />
+    <Compile Include="Models\kj_question.cs" />
+    <Compile Include="Models\kj_recharg_log.cs" />
+    <Compile Include="Models\kj_service.cs" />
+    <Compile Include="Models\kj_user.cs" />
+    <Compile Include="Models\kj_user_oauth_app.cs" />
+    <Compile Include="Models\kj_user_r_category.cs" />
+    <Compile Include="Models\Mapping\kj_answerMap.cs" />
+    <Compile Include="Models\Mapping\kj_categoryMap.cs" />
+    <Compile Include="Models\Mapping\kj_category_groupMap.cs" />
+    <Compile Include="Models\Mapping\kj_commentMap.cs" />
+    <Compile Include="Models\Mapping\kj_customerMap.cs" />
+    <Compile Include="Models\Mapping\kj_dictionaryMap.cs" />
+    <Compile Include="Models\Mapping\kj_dictionary_dataMap.cs" />
+    <Compile Include="Models\Mapping\kj_enterpriseMap.cs" />
+    <Compile Include="Models\Mapping\kj_enterprise_channelMap.cs" />
+    <Compile Include="Models\Mapping\kj_enterprise_channel_contentMap.cs" />
+    <Compile Include="Models\Mapping\kj_enterprise_channel_content_albumMap.cs" />
+    <Compile Include="Models\Mapping\kj_enterprise_channel_typeMap.cs" />
+    <Compile Include="Models\Mapping\kj_enterprise_commentMap.cs" />
+    <Compile Include="Models\Mapping\kj_invite_bidMap.cs" />
+    <Compile Include="Models\Mapping\kj_phone_verifycodeMap.cs" />
+    <Compile Include="Models\Mapping\kj_platform_logMap.cs" />
+    <Compile Include="Models\Mapping\kj_projectMap.cs" />
+    <Compile Include="Models\Mapping\kj_project_albumMap.cs" />
+    <Compile Include="Models\Mapping\kj_project_bid_enterpriseMap.cs" />
+    <Compile Include="Models\Mapping\kj_project_bid_enterprise_albumMap.cs" />
+    <Compile Include="Models\Mapping\kj_questionMap.cs" />
+    <Compile Include="Models\Mapping\kj_recharg_logMap.cs" />
+    <Compile Include="Models\Mapping\kj_serviceMap.cs" />
+    <Compile Include="Models\Mapping\kj_userMap.cs" />
+    <Compile Include="Models\Mapping\kj_user_oauth_appMap.cs" />
+    <Compile Include="Models\Mapping\kj_user_r_categoryMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
