@@ -31,7 +31,7 @@ namespace Common
             {
                 if (isInit)
                 {
-                    Dictionary<string, object> retData = api.SendTemplateSMS("18601935995", "1", new string[] { "123456", "15" });
+                    Dictionary<string, object> retData = api.SendTemplateSMS(mobilePhone, "1", new string[] { code, "15" });
 
                     if (retData != null)
                     {
