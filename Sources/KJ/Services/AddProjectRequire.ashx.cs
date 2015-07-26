@@ -80,7 +80,7 @@ namespace KJ.Services
             int int_PublicType = 0;
             string publicType = requestParams.Where(r => r.Key == "publicType").FirstOrDefault().Value;
 
-            if (string.IsNullOrEmpty(projectId) || (!string.IsNullOrEmpty(projectId) && int.TryParse(projectId, out int_ProjectId)))
+            if (string.IsNullOrEmpty(projectId) || (!string.IsNullOrEmpty(projectId) && !int.TryParse(projectId, out int_ProjectId)))
             {
                 resultStatus = "001";
                 resultMessage = "项目信息不能为空或项目信息不正确！";
@@ -90,7 +90,7 @@ namespace KJ.Services
                 resultStatus = "001";
                 resultMessage = "参与主体不能为空！";
             }
-            else if (!string.IsNullOrEmpty(joinType) && int.TryParse(joinType, out int_JoinType))
+            else if (!string.IsNullOrEmpty(joinType) && !int.TryParse(joinType, out int_JoinType))
             {
                 resultStatus = "001";
                 resultMessage = "参与主体参数不正确！";
@@ -100,7 +100,7 @@ namespace KJ.Services
                 resultStatus = "001";
                 resultMessage = "参与人数不能为空！";
             }
-            else if (!string.IsNullOrEmpty(joinCount) && int.TryParse(joinCount, out int_JoinCount) && int_JoinCount < 100)
+            else if (!string.IsNullOrEmpty(joinCount) && !int.TryParse(joinCount, out int_JoinCount) && int_JoinCount < 100)
             {
                 resultStatus = "001";
                 resultMessage = "参与人数填写错误！";
@@ -110,7 +110,7 @@ namespace KJ.Services
                 resultStatus = "001";
                 resultMessage = "区域不能为空！";
             }
-            else if (!string.IsNullOrEmpty(joinArea) && int.TryParse(joinArea, out int_JoinArea))
+            else if (!string.IsNullOrEmpty(joinArea) && !int.TryParse(joinArea, out int_JoinArea))
             {
                 resultStatus = "001";
                 resultMessage = "区域参数不正确！";
@@ -120,7 +120,7 @@ namespace KJ.Services
                 resultStatus = "001";
                 resultMessage = "发布类型不能为空！";
             }
-            else if (!string.IsNullOrEmpty(publicType) && int.TryParse(publicType, out int_PublicType))
+            else if (!string.IsNullOrEmpty(publicType) && !int.TryParse(publicType, out int_PublicType))
             {
                 resultStatus = "001";
                 resultMessage = "发布类型参数不正确！";

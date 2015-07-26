@@ -100,7 +100,7 @@ namespace KJ.Services
                 resultStatus = "001";
                 resultMessage = "验证码不能为空！";
             }
-            else if (string.IsNullOrEmpty(categoryId) || (!string.IsNullOrEmpty(categoryId) && int.TryParse(categoryId, out int_CategoryId)))
+            else if (string.IsNullOrEmpty(categoryId) || (!string.IsNullOrEmpty(categoryId) && !int.TryParse(categoryId, out int_CategoryId)))
             {
                 resultStatus = "001";
                 resultMessage = "所属行业不能为空或参数错误！";
